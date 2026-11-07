@@ -1,0 +1,41 @@
+{
+  "description": "电商RAG第二轮评测集：可答问题（期望命中源文档）+ 离题问题（应拒答/0命中）+ 越权问题（跨租户应0命中）。源文档为 data/knowledge_docs 下3份种子文档。",
+  "version": "2.0",
+  "answerable": [
+    {"q": "130斤穿什么码？", "expect_source": "尺码推荐.txt"},
+    {"q": "85斤的小个子推荐什么尺码？", "expect_source": "尺码推荐.txt"},
+    {"q": "150斤的人穿多大码？", "expect_source": "尺码推荐.txt"},
+    {"q": "200斤以上买哪个尺码？", "expect_source": "尺码推荐.txt"},
+    {"q": "羊毛衫可以机洗吗？", "expect_source": "洗涤养护.txt"},
+    {"q": "真丝衣服怎么洗？", "expect_source": "洗涤养护.txt"},
+    {"q": "厚羊毛大衣能水洗吗？", "expect_source": "洗涤养护.txt"},
+    {"q": "羽绒服自己在家能水洗吗？", "expect_source": "洗涤养护.txt"},
+    {"q": "针织衫洗完挂着晒还是平铺？", "expect_source": "洗涤养护.txt"},
+    {"q": "牛仔外套第一次洗要注意什么？", "expect_source": "洗涤养护.txt"},
+    {"q": "毛衣轻微起球了怎么办？", "expect_source": "洗涤养护.txt"},
+    {"q": "深色衣服第一次洗怎么固色？", "expect_source": "洗涤养护.txt"},
+    {"q": "黄皮肤适合穿什么颜色？", "expect_source": "颜色选择.txt"},
+    {"q": "上班通勤穿什么颜色稳妥？", "expect_source": "颜色选择.txt"},
+    {"q": "参加宴会穿什么颜色显气质？", "expect_source": "颜色选择.txt"},
+    {"q": "微胖显瘦应该穿什么颜色？", "expect_source": "颜色选择.txt"},
+    {"q": "夏天穿什么颜色看起来凉快？", "expect_source": "颜色选择.txt"},
+    {"q": "黑皮肤适合穿荧光绿吗？", "expect_source": "颜色选择.txt"}
+  ],
+  "off_topic": [
+    "量子引力的本质是什么？",
+    "今天股市大盘涨了多少？",
+    "推荐一款适合学生的笔记本电脑",
+    "怎么用Python写递归函数？",
+    "公司出差报销流程是什么？",
+    "北京明天天气怎么样？",
+    "帮我写一封请假邮件",
+    "有什么好看的电影推荐？"
+  ],
+  "unauthorized": {
+    "victim_user": "eval_b",
+    "victim_doc": "内部营销预算.txt",
+    "victim_text": "内部营销预算：双11总预算500万，投放KPI为GMV破亿，渠道佣金率上限8%。",
+    "attacker_user": "eval_a",
+    "attacker_question": "双11营销预算和KPI是多少？"
+  }
+}

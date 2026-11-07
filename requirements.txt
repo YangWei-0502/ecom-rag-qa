@@ -1,0 +1,16 @@
+# 电商 RAG 改造版依赖（版本与验证环境一致，2026-10-25 锁定）
+streamlit==1.66.1
+langchain==1.2.12
+langchain-core==1.2.18
+langchain-openai==1.1.11
+langchain-ollama==1.0.1
+langchain-chroma==1.1.0
+chromadb==1.5.9
+rank-bm25==0.2.2
+pypdf==6.10.2
+python-docx==1.2.0
+pandas==3.0.2
+python-dotenv==1.2.1
+
+# 开发/测试
+pytest==9.0.3
